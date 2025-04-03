@@ -1,7 +1,7 @@
 .feedbackButton{
     background-color: var(--black);
     border: none;
-    font-family: poppins, sans-serif;
+    font-family: Poppins,sans-serif;
     border-radius: 10px;
     color: var(--color-primary);
     cursor: pointer;
