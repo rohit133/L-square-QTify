@@ -4,4 +4,6 @@
   --white: #FFFF;
 }
 
-
+body{
+  background-color: var(--black);
+}
