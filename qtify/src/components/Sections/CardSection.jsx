@@ -6,22 +6,26 @@ import { capitalize } from "@mui/material";
 
 export default function CardSection(props) {
     const [albums, setAlbums] = useState([]);
+    const [showAll, setShowAll] = useState(false);
+
     useEffect(() => {
         async function fetchAlbums() {
             try {
-                let response = await axios.get(`https://qtify-backend-labs.crio.do/albums/${props.type}`);
+                const response = await axios.get(`https://qtify-backend-labs.crio.do/albums/${props.type}`);
                 setAlbums(response.data);
             } catch (error) {
                 console.error("Error fetching albums:", error);
             }
         }
         fetchAlbums();
-    }, []);
-    const [showAll, setShowAll] = useState(false);
+    }, [props.type]);
 
     const handleShowAll = () => {
-        setShowAll(!showAll);
+        setShowAll(prev => !prev);
     };
+
+    // Render either first 7 albums or all of them.
+    const displayedAlbums = showAll ? albums : albums.slice(0, 6);
 
     return (
         <section className={styles.Cardcontainer}>
@@ -32,27 +36,15 @@ export default function CardSection(props) {
                 </button>
             </header>
             <div className={styles.cardGrid}>
-                {albums.slice(0, 7).map((album) => (
+                {displayedAlbums.map((album) => (
                     <AlbumCard
-                        key={album.id} // Ensure each child has a unique key
+                        key={album.id}
                         albumArt={album.image}
                         albumName={album.title}
                         countOfFollowers={album.follows}
                     />
                 ))}
             </div>
-            {showAll && (
-                <div className={styles.cardGrid}>
-                    {albums.slice(7).map((album) => (
-                        <AlbumCard
-                            key={album.id} // Ensure each child has a unique key
-                            albumArt={album.image}
-                            albumName={album.title}
-                            countOfFollowers={album.follows}
-                        />
-                    ))}
-                </div>
-            )}
         </section>
     );
 }
