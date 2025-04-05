@@ -11,7 +11,9 @@ export default function HomePage(){
             <CardSection type={'top'}/>
             <Divider/>
             <CardSection type={'new'}/>
-
+            <Divider/>
+            <CardSection type={'songs'}/>
+            
         </>
     )
 }
