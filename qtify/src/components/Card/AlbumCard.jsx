@@ -11,7 +11,7 @@ import styles from './AlbumCard.module.css';
 export default function AlbumCard({ albumArt, countOfFollowers, albumName }) {
     return (
     <div className={styles.Card}>
-            <Card sx={{ width: 159, height:232, borderRadius:2 }}>
+            <Card sx={{ width: 159, height:215, borderRadius:2 }}>
                 <CardMedia
                     component="img"
                     alt="green iguana"

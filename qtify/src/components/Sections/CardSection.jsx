@@ -6,7 +6,7 @@ import { capitalize } from "@mui/material";
 
 export default function CardSection(props) {
     const [albums, setAlbums] = useState([]);
-    const [showAll, setShowAll] = useState(false);
+    const [showAll, setShowAll] = useState(true);
 
     useEffect(() => {
         async function fetchAlbums() {

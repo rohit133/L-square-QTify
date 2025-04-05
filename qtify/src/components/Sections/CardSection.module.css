@@ -10,14 +10,14 @@
     padding: 0 20px;
 
 }
-.cardGrid{
+/* .cardGrid{
     display: grid;
-    /* align-items: center;
-    justify-content: center; */
+    align-items: center;
+    justify-content: center;
     padding: 20px 0;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 16px;
-}
+} */
 .sectionTitle{
     margin: 4px;
     font-size: 20px;
@@ -36,4 +36,11 @@
 }
 .seeAllButton:hover{
     color: var(--white);
+}
+
+.cardGrid {
+    display: grid;
+    padding: 20px 0;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
 }
