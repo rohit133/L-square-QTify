@@ -12,7 +12,7 @@ export default function FAQ() {
         <div className={styles.faqContainer}>
             <h1 className={styles.faqTitle}>FAQs</h1>
             <div className="faq-item">
-                <Accordion defaultExpanded>
+                <Accordion style={{borderRadius: '10px', marginBottom: '5px'}} defaultExpanded>
                     <AccordionSummary className={styles.questionContainer} expandIcon={<ExpandMoreIcon sx={{fill: '#34C94B', width: '2rem', height: '2rem'}} />} aria-controls="panel1-content" id="panel1-header">
                         <Typography className={styles.question} component="span">Is Qtify free to use?</Typography>
                     </AccordionSummary>
@@ -24,7 +24,7 @@ export default function FAQ() {
                     </AccordionDetails>
                 </Accordion>
                 
-                <Accordion>
+                <Accordion style={{borderRadius: '10px', marginBottom: '5px'}}>
                     <AccordionSummary className={styles.questionContainer} expandIcon={<ExpandMoreIcon sx={{fill: '#34C94B', width: '2rem', height: '2rem'}} />} aria-controls="panel2-content" id="panel2-header">
                         <Typography className={styles.question}  component="span">Can I download and listen to song offline?</Typography>
                     </AccordionSummary>
