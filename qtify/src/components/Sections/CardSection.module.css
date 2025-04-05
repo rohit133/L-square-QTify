@@ -3,7 +3,6 @@
     flex-direction: column;
     padding: 10px 0;
   }
-  
   .sectionHeader {
     display: flex;
     justify-content: space-between;
@@ -44,7 +43,7 @@
     color: var(--white);
   }
   .tabContainer{
-    padding: 20px 2.5rem;
+    padding: 2px 40px 1.5rem;
 
   }
   

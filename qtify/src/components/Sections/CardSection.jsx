@@ -97,6 +97,9 @@ export default function CardSection(props) {
                 ".MuiTabs-indicator":{
                   backgroundColor: `#34C94B !important`,
                 },
+                "button": {
+                  minWidth: '40px !important', 
+                },
               }}
             >
               {genres.map((genre) => (
